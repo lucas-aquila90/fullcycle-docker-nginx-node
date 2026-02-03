@@ -18,6 +18,11 @@ services:
       - MYSQL_DATABASE=fullcycle
     depends_on:
       - db
+    command: >
+      dockerize
+      -wait tcp://db:3306
+      -timeout 20s
+      node index.js
     tty: true
 
   db:
