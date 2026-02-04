@@ -9,6 +9,7 @@ services:
       - node-network
     volumes:
       - ./app:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - "3005:3005"
     environment:
